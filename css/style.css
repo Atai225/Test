@@ -1,67 +1,165 @@
-*{
+* {
 	box-sizing: border-box;
 }
-@font-face{
-	font-family:'Gilroy-Bold';
+
+@font-face {
+	font-family: 'Gilroy-Bold';
 	src: url(../fonts/Gilroy-Bold.ttf);
 }
-@font-face{
+
+@font-face {
 	font-family: 'Gilroy-Medium';
 	src: url(../fonts/Gilroy-Medium.ttf);
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
-.container{
+
+.container {
 	max-width: 50rem;
 	margin: 0 auto;
 }
-.header__intro{
+
+.header__intro {
 	min-height: 90vh;
 }
-.nav__container{
+
+.nav__container {
 	max-width: 73.125rem;
 	margin: 0 auto;
 	min-height: 3.75rem;
 }
-.navbar{
+
+.navbar {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.brand--link{
+
+.brand--link {
 	font-family: 'Gilroy-Bold', sans-serif;
 	font-size: 18px;
+	cursor: pointer;
 	text-decoration: none;
+	color: black;
 }
-.nav{
+
+.nav {
 	display: flex;
 	min-width: 440px;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
 }
-.nav__link{
+
+.nav__link {
 	font-family: 'Gilroy-Medium', sans-serif;
 	font-size: 18px;
 	color: #313131;
 	text-decoration: none;
 }
-.btn{
+
+.btn {
 	display: inline-block;
 	background: transparent;
 	padding: 18px 45px;
 	border: none;
+	cursor: pointer;
 }
-.btn--green{
+.btn:hover .btn__link{
+	font-size: 19px;
+}
+.btn:active .btn__link{
+	font-size: 16px;
+	padding: 5px;
+	color: black;
+}
+.btn--green:active{
+	background: transparent;
+}
+.btn--green {
 	background-color: #49AD09;
 	box-shadow: 0px 100px 80px rgba(49, 49, 49, 0.1), 0px 64.8148px 46.8519px rgba(49, 49, 49, 0.0759259), 0px 38.5185px 25.4815px rgba(49, 49, 49, 0.0607407), 0px 20px 13px rgba(49, 49, 49, 0.05), 0px 8.14815px 6.51852px rgba(49, 49, 49, 0.0392593), 0px 1.85185px 3.14815px rgba(49, 49, 49, 0.0240741);
 	border-radius: 5px;
 }
-.btn__link{
+
+.btn__link {
 	font-family: 'Gilroy-Bold', sans-serif;
 	font-size: 18px;
 	text-decoration: none;
 	color: white;
 }
-.btn__link--black{
+
+.btn__link--black {
 	color: black;
+}
+.intro{
+	max-width:600px;
+	margin: 0 auto;
+	padding:0 2rem;
+}
+
+.intro__title {
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-size: 78px;
+	font-weight: 800px;
+	text-align: center;
+}
+
+.title--green {
+	color: #49AD09;
+}
+
+.intro__text {
+	font-family: 'Gilroy-Medium', sans-serif;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.btn__link--underline {
+	color: black;
+	text-decoration: underline;
+}
+
+.btn__link--underline::after {
+	content: "➤";
+}
+
+
+.link-us__btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.header__intro{
+	margin-top: 4rem;
+	display: flex;
+}
+.header__bg{
+	max-width: 335px;
+}
+.header__img{
+	object-fit: cover;
+	height: auto;
+	max-width: 300px;
+}
+@media screen and (max-width:1070px) {
+	.header__bg{
+		display: none;
+	}
+}
+@media screen and (max-width:460px){
+	.link-us__btn{
+		display: flex;
+		flex-direction: column;
+	}
+	.intro__title{
+		font-size: 45px;
+	}
+	.intro{
+		max-width: max-content;
+	}
 }
